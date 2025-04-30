@@ -1,0 +1,170 @@
+body {
+  background: #181a1b; /* Very dark gray for dark mode */
+  color: #f1f1f1;      /* Light text for contrast */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #f1f1f1;
+}
+
+
+main {
+  padding: 20px;
+  color: #f1f1f1;
+}
+
+button {
+  background-color: #3a6ee8; /* Dark blue for buttons */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 0; /* Adjusted margin to align with header layout */
+  color: #fff;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #1850be; /* Slightly darker on hover */
+}
+
+.App-header {
+  background-color: #23272f;
+  padding: 2px 0 2px 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Remove justify-content: center; */
+  position: relative;
+}
+
+.home-icon-link {
+  color: #3a6ee8;
+  margin-left: 18px; /* left padding for the icon */
+  display: flex;
+  align-items: center;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.home-icon-link:hover {
+  color: #1850be;
+  background: rgba(58, 110, 232, 0.18);
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 18px; /* space between icon and title */
+}
+
+/* Optional: If you want the title to be truly centered in the header, use flex: 1 */
+.header-title {
+  flex: 1;
+  text-align: left;
+  margin-left: 18px;
+}
+
+.home-center-container {
+  min-height: 80vh; /* For vertical centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-center-container h2 {
+  margin-bottom: 12px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home-center-container p {
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+}
+
+.home-button-row {
+  display: flex;
+  gap: 16px; /* Space between buttons */
+}
+
+.home-button-row button {
+  font-size: 1rem;
+  padding: 10px 28px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #444; /* Dark border for inputs */
+  border-radius: 3px;
+  font-family: Arial, sans-serif;
+  background: #181a1b; /* Dark input background */
+  color: #f1f1f1; /* Light text */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888; /* Muted placeholder text */
+}
+
+.textarea-large {
+  height: 80px;
+}
+
+.textarea-medium {
+  height: 60px;
+}
+
+.form-outer {
+  /* No flex by default, so container stays at natural width and centered by margin:auto */
+}
+
+.form-container {
+  background: #23272f; /* Dark card background */
+  padding: 32px 32px 24px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.7); /* Strong shadow for dark mode */
+  width: 100%;
+  max-width: 420px; /* Keeps the container just a bit wider than input fields */
+  margin: 40px auto; /* Center horizontally with space on top/bottom */
+  transition: box-shadow 0.2s;
+}
+
+/* Responsive: On small screens, use flex to center vertically/horizontally */
+@media (max-width: 600px) {
+  .form-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: flex-start;
+  }
+  .form-container {
+    margin: 24px 8px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
